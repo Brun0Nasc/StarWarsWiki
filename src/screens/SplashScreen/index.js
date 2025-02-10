@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
+import { CustomText } from '../../components'
 import logoImage from '../../../assets/LogoEmpire.png'
 
 export const SplashScreen = () => {
   return (
     <View style={styles.container}>
       <Image style={styles.logo} source={logoImage} />
-      <Text style={styles.titleText}>StarWars - Wiki</Text>
+      <CustomText>StarWars - Wiki</CustomText>
       <StatusBar style="auto" />
     </View>
   );
@@ -22,11 +23,5 @@ const styles = StyleSheet.create({
   logo: {
     height: 64,
     width: 64
-  },
-  titleText: {
-    color: '#fff',
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginTop: 12
   }
 });
